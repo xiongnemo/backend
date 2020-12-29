@@ -177,7 +177,7 @@ class HomeworkDataView(APIView):
             }), status=status.HTTP_404_NOT_FOUND)
 
         request_body = json.loads(request_body_unicode)
-        homework.homework_creator = request_body["homeworkCreatorId"]
+        homework.homework_creator = TEST_USER
         homework.homework_title = request_body["homeworkTitle"]
         homework.homework_description = request_body["homeworkDescription"]
         homework.homework_start_timestamp = request_body["homeworkStartTime"]
